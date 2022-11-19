@@ -1,0 +1,48 @@
+GET http://localhost:3000/api HTTP/1.1
+###
+GET https://localhost:3000/api/posts HTTP/1.1
+###
+GET https://localhost:3000/api HTTP/1.1
+###
+POST https://localhost:3000/api/posts HTTP/1.1
+content-type: application/json
+
+{
+    "id": "2",
+    "issueName": "Filing issue",
+    "description": "Files are not in correct order",
+    "departments": "Accounting, Customer Service, IT"
+}
+###
+DELETE https://localhost:3000/api/posts/63440fd8d336f81cc951b97b HTTP/1.1
+###
+POST https://localhost:3000/api/users/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test2",
+    "password": "youwillneverguess"
+}
+###
+POST https://localhost:3000/api/users/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test",
+    "password": "youwillneverguess"
+}
+###
+POST https://localhost:3000/api/posts HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyaWQiOiI2MzQwN2Q2NzUxNjhiZGM0ZTg4MzFiYmUiLCJpYXQiOjE2Njc5MjE3MzUsImV4cCI6MTY2NzkyNTMzNX0.u6f7lMGDFJnH1sY2Ypc9GsvLye3zkQ9mo9ycsalm4-M
+
+{
+    "id": "2",
+    "issueName": "Filing issue",
+    "description": "Files are not in correct order",
+    "departments": "Accounting, Customer Service, IT"
+}
+###
+DELETE https://localhost:3000/api/posts/63456721c261a9786f56eb46 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyaWQiOiI2MzQwN2Q2NzUxNjhiZGM0ZTg4MzFiYmUiLCJpYXQiOjE2Njc5MjE3MzUsImV4cCI6MTY2NzkyNTMzNX0.u6f7lMGDFJnH1sY2Ypc9GsvLye3zkQ9mo9ycsalm4-M
+###
